@@ -37,6 +37,8 @@ Centralised logging, collect all tradional output into central server.
     - todo keys
     - todo mcollectived
     - todo puppet::client
+    - todo sudo
+    - todo ssh::user
 
 ### Puppetmaster Node ###
 
@@ -68,3 +70,4 @@ Make sure your puppet.conf has the following settings
 ### Setup ###
     vagrant up
     vagrant provision
+    vagrant ssh

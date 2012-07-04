@@ -49,8 +49,10 @@ Centralised logging, collect all tradional output into central server.
     - todo nagiosd
     - todo puppet::server
         - todo use environments
+        - todo use behind passenger
     - todo puppet::dashboard
         - todo use as enc
+        - todo use behind passenger
     - todo gdash
     - todo graphite
 

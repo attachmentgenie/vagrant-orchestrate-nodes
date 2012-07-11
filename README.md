@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/attachmentgenie/orchestrate-nodes.png)](http://travis-ci.org/attachmentgenie/orchestrate-nodes)
+
 # Setting up your nodes #
 
 ## Notes ##

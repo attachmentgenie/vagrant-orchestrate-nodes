@@ -1,2 +1,2 @@
-  class { 'client': }
-  class { 'server': }
+include 'client'
+include 'server'

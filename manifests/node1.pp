@@ -1,1 +1,1 @@
-  class { 'client': }
+include 'client'

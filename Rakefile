@@ -1,4 +1,5 @@
 require 'rake'
+PuppetLint.configuration.ignore_paths = ["modules/**/*.pp"]
 
 begin
   require 'rspec/core/rake_task'

@@ -4,6 +4,8 @@ Vagrant::Config.run do |config|
   config.ssh.max_tries = 50
   config.ssh.timeout   = 300
 
+  config.vm.share_folder "project", "/home/vagrant/orchestrate-nodes", "."
+
   config.vm.define :puppetmaster do |puppetmaster_config|
     puppetmaster_config.vm.provision :puppet do |puppet|
         puppet.manifests_path = "manifests"

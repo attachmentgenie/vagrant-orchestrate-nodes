@@ -3,7 +3,6 @@ require 'rake'
 begin
   require 'rspec/core/rake_task'
   require 'puppet-lint/tasks/puppet-lint'
-  PuppetLint.configuration.ignore_paths = ["modules/**/*.pp"]
 rescue LoadError
   require 'rubygems'
   retry

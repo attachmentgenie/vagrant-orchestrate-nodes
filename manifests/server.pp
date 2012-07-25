@@ -1,4 +1,4 @@
-class types::server () {
+class server () {
 
   #Install applications to provision machines
   case $::operatingsystem {

@@ -1,0 +1,2 @@
+  class { 'client': }
+  class { 'server': }

@@ -1,1 +1,1 @@
-import "default.pp"
+import 'default.pp'

@@ -68,10 +68,12 @@ Make sure your puppet.conf has the following settings
 
 ## Creating a disposable test environment ##
 ### Requirements ###
-    Virtualbox => https://www.virtualbox.org
-    Vagrant    => http://www.vagrantup.com
+    Virtualbox       => https://www.virtualbox.org
+    Vagrant          => http://www.vagrantup.com
+    librarian-puppet => gem install librarian-puppet
 
 ### Setup ###
+    librarian-puppet install
     vagrant up
     vagrant provision
     vagrant ssh

@@ -1,5 +1,3 @@
-class client () {
-
   Exec {
     path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
   }
@@ -66,4 +64,3 @@ class client () {
 
   class { 'rsyslog::client': }
   motd::register{ 'Module : rsyslog': }
-}

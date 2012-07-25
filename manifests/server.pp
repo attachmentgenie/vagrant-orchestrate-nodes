@@ -1,4 +1,4 @@
-class server () {
+  include 'client.pp'
 
   #Install applications to provision machines
   case $::operatingsystem {
@@ -9,4 +9,3 @@ class server () {
     ensure  => latest,
     require => Exec['apt_update'],
   }
-}

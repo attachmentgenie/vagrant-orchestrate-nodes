@@ -1,4 +1,4 @@
-  include 'client.pp'
+  import 'client.pp'
 
   #Install applications to provision machines
   case $::operatingsystem {

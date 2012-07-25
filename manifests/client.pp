@@ -47,6 +47,14 @@
   }
 
   #Setup services
+  class { 'locales': }
+  motd::register{ 'Module : Locales': }
+
+  class { 'timezone':
+    zone => "Europe/Amsterdam",
+  }
+  motd::register{ 'Module : timezone': }
+
   class { 'ufw': }
   motd::register{ 'Module : ufw': }
 

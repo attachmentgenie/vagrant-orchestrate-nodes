@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
     puppetmaster_config.vm.provision :puppet do |puppet|
         puppet.manifests_path = "manifests"
         puppet.module_path = "modules"
-        puppet.manifest_file = "puppetmaster.pp"
+        puppet.manifest_file = "server.pp"
     end
   end
 end

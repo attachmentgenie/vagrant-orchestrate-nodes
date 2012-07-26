@@ -9,7 +9,7 @@
     ip           => $ipaddress,
   }
   motd::register{ 'File : /etc/hosts': }
-    
+
   class { 'motd': }
   motd::register{ 'Module : motd': }
 
@@ -69,10 +69,10 @@
         'method' => 'dhcp',
       }
     },
-    auto => ['eth0'],
+    auto       => ['eth0'],
   }
   motd::register{ 'Module : network': }
-    
+
   class { 'ufw': }
   motd::register{ 'Module : ufw': }
 
@@ -91,5 +91,7 @@
   class { 'rsyslog::client': }
   motd::register{ 'Module : rsyslog': }
 
-  class { 'puppet': }
+  class { 'puppet::agent':
+    puppet_server => 'puppet',
+  }
   motd::register{ 'Module : puppet': }

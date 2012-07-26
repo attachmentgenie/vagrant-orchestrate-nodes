@@ -19,7 +19,7 @@
     provider => gem,
   }
 
-  class { 'puppet': 
+  class { 'puppet':
     agent               => false,
     master              => true,
     puppet_passenger    => true,

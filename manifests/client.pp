@@ -2,6 +2,14 @@
     path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
   }
 
+  host {'self':
+    ensure       => present,
+    name         => $fqdn,
+    host_aliases => ['puppet', $hostname],
+    ip           => $ipaddress,
+  }
+  motd::register{ 'File : /etc/hosts': }
+    
   class { 'motd': }
   motd::register{ 'Module : motd': }
 
@@ -51,10 +59,20 @@
   motd::register{ 'Module : Locales': }
 
   class { 'timezone':
-    zone => "Europe/Amsterdam",
+    zone => 'Europe/Amsterdam',
   }
   motd::register{ 'Module : timezone': }
 
+  class { 'network::interfaces':
+    interfaces => {
+      'eth0' => {
+        'method' => 'dhcp',
+      }
+    },
+    auto => ['eth0'],
+  }
+  motd::register{ 'Module : network': }
+    
   class { 'ufw': }
   motd::register{ 'Module : ufw': }
 
@@ -72,3 +90,6 @@
 
   class { 'rsyslog::client': }
   motd::register{ 'Module : rsyslog': }
+
+  class { 'puppet': }
+  motd::register{ 'Module : puppet': }

@@ -14,8 +14,8 @@ mod 'motd',
 mod 'puppet',
     :git => 'git://github.com/attachmentgenie/puppetlabs-puppet.git'
 mod 'dashboard',
-    :git => 'git://github.com/puppetlabs/puppetlabs-dashboard.git'
+    :git => 'git://github.com/attachmentgenie/puppetlabs-dashboard.git'
 mod 'puppetlabs/mysql'
 mod 'passenger',
-    :git => 'git://github.com/puppetlabs/puppetlabs-passenger.git'
+    :git => 'git://github.com/attachmentgenie/puppetlabs-passenger.git'
 mod 'puppetlabs/apache'

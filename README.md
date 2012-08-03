@@ -30,7 +30,12 @@ Centralised logging, collect all tradional output into central server.
     - ntp
     - rsyslog::client
     - ssh::client
-    - ufw
+    - firewall -> ufw
+    - locale
+    - timezone
+    - network
+    - host file entries
+    - puppet::client
     - todo bash color based on environment
     - todo certificates
     - todo ganglia-monitor
@@ -38,7 +43,6 @@ Centralised logging, collect all tradional output into central server.
     - todo interfaces
     - todo keys
     - todo mcollectived
-    - todo puppet::client
     - todo sudo
     - todo ssh::user
 
@@ -49,12 +53,12 @@ Centralised logging, collect all tradional output into central server.
     - todo gangliad
     - todo MAAS (dhcp, dns, apt repositories?, ntp?)
     - todo nagiosd
-    - todo puppet::server
+    - puppet::server
         - todo use environments
-        - todo use behind passenger
-    - todo puppet::dashboard
+        - use behind passenger
+    - puppet::dashboard
         - todo use as enc
-        - todo use behind passenger
+        - use behind passenger
     - todo gdash
     - todo graphite
 

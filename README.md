@@ -21,7 +21,6 @@ Centralised logging, collect all tradional output into central server.
 
 ### Default Node ###
 
-    -
     - groups
     - users
     - motd
@@ -33,34 +32,32 @@ Centralised logging, collect all tradional output into central server.
     - firewall -> ufw
     - locale
     - timezone
-    - network
+    - network interfaces
     - host file entries
     - puppet::client
+    - todo mcollectived
+    - todo ganglia-monitor
     - todo bash color based on environment
     - todo certificates
-    - todo ganglia-monitor
-    - todo Hosts
-    - todo interfaces
     - todo keys
-    - todo mcollectived
     - todo sudo
     - todo ssh::user
 
 ### Puppetmaster Node ###
 
     - apps::provision => juju
-    - todo central logging
-    - todo gangliad
-    - todo MAAS (dhcp, dns, apt repositories?, ntp?)
-    - todo nagiosd
     - puppet::server
         - todo use environments
         - use behind passenger
     - puppet::dashboard
         - todo use as enc
         - use behind passenger
+    - todo central logging
+    - todo gangliad
+    - todo nagiosd
     - todo gdash
     - todo graphite
+    - todo MAAS (dhcp, dns, apt repositories?, ntp?)
 
 ### Settings ###
 Make sure your puppet.conf has the following settings

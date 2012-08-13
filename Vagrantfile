@@ -3,6 +3,7 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.ssh.max_tries = 50
   config.ssh.timeout   = 300
+  config.vm.forward_port 80, 80
   config.vm.forward_port 8080, 8080
   config.vm.share_folder "project", "/home/vagrant/orchestrate-nodes", "."
   config.vm.define :puppetmaster do |puppetmaster_config|

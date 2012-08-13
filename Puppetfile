@@ -19,3 +19,5 @@ mod 'puppetlabs/mysql'
 mod 'passenger',
     :git => 'git://github.com/attachmentgenie/puppetlabs-passenger.git'
 mod 'puppetlabs/apache'
+mod 'danleyden/ganglia'
+mod 'puppetlabs/mcollective'

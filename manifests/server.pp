@@ -100,7 +100,7 @@
     cluster => 'orchestrate-nodes'
   }
   ufw::allow { 'allow-udp-8649-from-all':
-    port => 8649,
+    port  => 8649,
     proto => "udp",
   }
   class {'ganglia::server': }
@@ -109,10 +109,10 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
-  
+
   class { 'mcollective':
-    client              => true,
-    stomp_server        => 'localhost',
+    client       => true,
+    stomp_server => 'localhost',
   }
   motd::register{ 'Module : mcollective': }
 

@@ -13,24 +13,6 @@
   class { 'motd': }
   motd::register{ 'Module : motd': }
 
-  #Create users and groups.
-  group { 'noc':
-    ensure => present,
-    gid    => '1010',
-  }
-
-  user { 'platform-admin':
-    ensure   => present,
-    uid      => '1010',
-    gid      => '1010',
-    home     => '/home/platform-admin',
-    shell    => '/bin/bash',
-    password => '$6$/3pg4lDJ$JthiJN.q4TgEv7gzazzOqbSgLCJF3ZPHImyqjJ7FeRKbTkUUkzS7cfUScnR5n36G9sX9ppY/L/x4tKJeAQvAz.',
-  }
-
-  motd::register{ 'Accounts : platform-admin': }
-  motd::register{ 'Groups : noc': }
-
   #Setup repositories
   class { 'apt': }
 
@@ -115,13 +97,6 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
-
-  class { 'mcollective':
-    client       => true,
-    stomp_server => 'localhost',
-  }
-  motd::register{ 'Module : mcollective': }
->>>>>>> 187e727c9113f1c1e83dc286140d6376981589a6
 
   #Install applications to provision machines
   case $::operatingsystem {

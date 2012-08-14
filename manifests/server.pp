@@ -109,7 +109,7 @@
     port => 8160,
   }
   motd::register{ 'Module : activemq': }
-  
+
   class { 'mcollective':
     manage_plugins      => true,
     version             => 'present',
@@ -121,7 +121,7 @@
     port => 6163,
   }
   motd::register{ 'Module : mcollective': }
-  
+
   #Install applications to provision machines
   case $::operatingsystem {
     default: { $provision_packages = ['juju'] }

@@ -1,3 +1,0 @@
---- 
-  LIBRARIAN_PUPPET_PATH: /home/vagrant/orchestrate-nodes/modules/
-  LIBRARIAN_PUPPET_DESTRUCTIVE: "false"

@@ -3,3 +3,5 @@
 modules/
 
 /Puppetfile.lock
+
+/.librarian/

@@ -101,8 +101,9 @@
     network_mode      => 'unicast',
     unicast_targets   => [{'ipaddress' => '127.0.0.1', 'port' => '8649'}],
   }
-  ufw::allow { 'allow-udp-ganglia-8649-from-all':
-    port => 8649,
+
+  ufw::allow { 'allow-udp-8649-from-all':
+    port  => 8649,
     proto => "udp",
   }
   class {'ganglia::server':
@@ -114,6 +115,13 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
+
+  class { 'mcollective':
+    client       => true,
+    stomp_server => 'localhost',
+  }
+  motd::register{ 'Module : mcollective': }
+>>>>>>> 187e727c9113f1c1e83dc286140d6376981589a6
 
   #Install applications to provision machines
   case $::operatingsystem {

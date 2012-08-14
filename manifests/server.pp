@@ -14,7 +14,9 @@
   motd::register{ 'Module : motd': }
 
   #Setup repositories
-  class { 'apt': }
+  class { 'apt':
+    always_apt_update => true,
+  }
 
   # The Puppet Labs APT source and gpg key.
   apt::source { 'puppetlabs':
@@ -98,6 +100,28 @@
   }
   motd::register{ 'Module : ganglia': }
 
+  class  { 'java':
+    distribution => 'jdk',
+    version      => 'latest',
+  }
+  class  { 'activemq': }
+  ufw::allow { 'allow-all-activemq-admin-from-all':
+    port => 8160,
+  }
+  motd::register{ 'Module : activemq': }
+  
+  class { 'mcollective':
+    manage_plugins      => true,
+    version             => 'present',
+    client              => true,
+    stomp_server        => 'precise64',
+    stomp_port          => '6163',
+  }
+  ufw::allow { 'allow-all-mcollective-from-all':
+    port => 6163,
+  }
+  motd::register{ 'Module : mcollective': }
+  
   #Install applications to provision machines
   case $::operatingsystem {
     default: { $provision_packages = ['juju'] }

@@ -5,6 +5,7 @@ Vagrant::Config.run do |config|
   config.ssh.timeout   = 300
   config.vm.forward_port 80, 80
   config.vm.forward_port 8080, 8080
+  config.vm.forward_port 8160, 8160
   config.vm.share_folder "project", "/home/vagrant/orchestrate-nodes", "."
   config.vm.define :puppetmaster do |puppetmaster_config|
     puppetmaster_config.vm.provision :puppet do |puppet|

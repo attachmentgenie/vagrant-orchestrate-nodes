@@ -21,3 +21,8 @@ mod 'passenger',
 mod 'puppetlabs/apache'
 mod 'ganglia',
     :git => 'git://github.com/attachmentgenie/puppet-ganglia'
+mod 'mcollective',
+    :git => 'git://github.com/attachmentgenie/puppetlabs-mcollective.git'
+mod 'activemq',
+    :git => 'git://github.com/attachmentgenie/puppetlabs-activemq.git'
+mod 'puppetlabs/java'

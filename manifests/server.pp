@@ -77,13 +77,13 @@
   motd::register{ 'Module : ufw': }
 
   class { 'ssh::client': }
-  ufw::allow { 'allow-ssh-from-all':
+  ufw::allow { 'allow-all-ssh-from-all':
     port => 22,
   }
   motd::register{ 'Module : ssh': }
 
   class { 'ntp': }
-  ufw::allow { 'allow-ntp-from-all':
+  ufw::allow { 'allow-all-ntp-from-all':
     port => 123,
   }
   motd::register{ 'Module : ntp': }
@@ -97,24 +97,23 @@
   motd::register{ 'Module : puppet': }
 
   class {'ganglia::client':
-    cluster => 'orchestrate-nodes'
+    cluster           => 'nodes',
+    network_mode      => 'unicast',
+    unicast_targets   => [{'ipaddress' => '127.0.0.1', 'port' => '8649'}],
   }
-  ufw::allow { 'allow-udp-8649-from-all':
+  ufw::allow { 'allow-udp-ganglia-8649-from-all':
     port => 8649,
     proto => "udp",
   }
-  class {'ganglia::server': }
+  class {'ganglia::server':
+    clusters     => [{cluster_name => 'nodes', cluster_hosts => [{address => 'localhost', port => '8649'}]}],
+    gridname     => 'orchestrate-nodes',
+  }
   class {'ganglia::webserver': }
-  ufw::allow { 'allow-http-80-from-all':
+  ufw::allow { 'allow-all-http-80-from-all':
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
-  
-  class { 'mcollective':
-    client              => true,
-    stomp_server        => 'localhost',
-  }
-  motd::register{ 'Module : mcollective': }
 
   #Install applications to provision machines
   case $::operatingsystem {
@@ -144,7 +143,7 @@
     dashboard_site      => 'puppet',
     certname            => 'puppet',
   }
-  ufw::allow { 'allow-http-8080-from-all':
+  ufw::allow { 'allow-all-http-8080-from-all':
     port => 8080,
   }
   motd::register{ 'Module : puppetmaster': }

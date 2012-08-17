@@ -18,14 +18,6 @@
     always_apt_update => true,
   }
 
-  # The Puppet Labs APT source and gpg key.
-  apt::source { 'puppetlabs':
-    location   => 'http://apt.puppetlabs.com',
-    repos      => 'main',
-    key        => '4BD6EC30',
-    key_server => 'pgp.mit.edu',
-  }
-
   motd::register{ 'Module : apt': }
 
   #Install default applications
@@ -100,22 +92,14 @@
   }
   motd::register{ 'Module : ganglia': }
 
-  class  { 'java':
-    distribution => 'jdk',
-    version      => 'latest',
+  #Install default applications
+  case $::operatingsystem {
+    default: { $mcollective_packages = ['mcollective','mcollective-client','mcollective-common','mcollective-middleware'] }
   }
-  class  { 'activemq': }
-  ufw::allow { 'allow-all-activemq-admin-from-all':
-    port => 8160,
-  }
-  motd::register{ 'Module : activemq': }
 
-  class { 'mcollective':
-    manage_plugins      => true,
-    version             => 'present',
-    client              => true,
-    stomp_server        => 'precise64',
-    stomp_port          => '6163',
+  package { $mcollective_packages:
+    ensure  => latest,
+    require => Exec['apt_update'],
   }
   ufw::allow { 'allow-all-mcollective-from-all':
     port => 6163,
@@ -145,8 +129,8 @@
     agent               => false,
     master              => true,
     puppet_passenger    => true,
-    dashboard           => true,
-    dashboard_passenger => true,
+    dashboard           => false,
+    dashboard_passenger => false,
     dashboard_site      => 'puppet',
     certname            => 'puppet',
   }

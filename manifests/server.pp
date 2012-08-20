@@ -138,6 +138,6 @@
     port => 8080,
   }
   motd::register{ 'Module : puppetmaster': }
-  motd::register{ 'Module : puppet-dashboard': }
+  #motd::register{ 'Module : puppet-dashboard': }
   motd::register{ 'Module : apache': }
   motd::register{ 'Module : passenger': }

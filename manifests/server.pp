@@ -108,7 +108,7 @@
 
   #Install applications to provision machines
   case $::operatingsystem {
-    default: { $provision_packages = ['juju'] }
+    default: { $provision_packages = ['byobu'] }
   }
 
   package { $provision_packages:

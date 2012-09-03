@@ -31,6 +31,7 @@ Centralised logging, collect all tradional output into central server.
     - ssh::client
     - firewall -> ufw
     - locale
+    - logrotate
     - timezone
     - network interfaces
     - host file entries

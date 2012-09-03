@@ -9,6 +9,8 @@ mod 'attachmentgenie/network'
 mod 'attachmentgenie/ssh'
 mod 'attachmentgenie/timezone'
 mod 'attachmentgenie/ufw'
+mod 'apache',
+    :git => 'git://github.com/attachmentgenie/puppetlabs-apache.git'
 mod 'motd',
     :git => 'git://github.com/attachmentgenie/puppet-motd.git'
 mod 'puppet',
@@ -21,6 +23,8 @@ mod 'passenger',
 mod 'puppetlabs/apache'
 mod 'ganglia',
     :git => 'git://github.com/attachmentgenie/puppet-ganglia'
+mod 'logrotate',
+    :git => 'git://github.com/attachmentgenie/puppet-logrotate'
 mod 'logstash',
     :git => 'git://github.com/attachmentgenie/puppet-logstash'
 mod 'kibana',

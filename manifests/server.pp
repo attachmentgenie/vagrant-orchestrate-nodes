@@ -76,7 +76,8 @@
   class {'ganglia::client':
     cluster           => 'nodes',
     network_mode      => 'unicast',
-    unicast_targets   => [{'ipaddress' => '127.0.0.1', 'port' => '8649'}],
+    unicast_targets   => [{'ipaddress' => '127.0.0.1',
+                           'port'      => '8649'}],
   }
 
   ufw::allow { 'allow-udp-8649-from-all':
@@ -84,7 +85,9 @@
     proto => 'udp',
   }
   class {'ganglia::server':
-    clusters     => [{cluster_name => 'nodes', cluster_hosts => [{address => 'localhost', port => '8649'}]}],
+    clusters     => [{cluster_name  => 'nodes',
+                      cluster_hosts => [{address => 'localhost',
+                                         port    => '8649'}]}],
     gridname     => 'orchestrate-nodes',
   }
   class {'ganglia::webserver': }

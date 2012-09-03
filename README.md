@@ -54,9 +54,11 @@ Centralised logging, collect all tradional output into central server.
         - use behind passenger
     - todo central logging
     - gangliad
+    - mcollective client
     - todo nagiosd
     - todo gdash
     - todo graphite
+    - todo MAAS
 
 ### Settings ###
 Make sure your puppet.conf has the following settings

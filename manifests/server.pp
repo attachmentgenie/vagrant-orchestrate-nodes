@@ -13,7 +13,7 @@
   class { 'motd': }
   motd::register{ 'Module : motd': }
   motd::register{ 'Module : logrotate': }
-  
+
   #Setup repositories
   class { 'apt':
     always_apt_update => true,
@@ -81,7 +81,7 @@
 
   ufw::allow { 'allow-udp-8649-from-all':
     port  => 8649,
-    proto => "udp",
+    proto => 'udp',
   }
   class {'ganglia::server':
     clusters     => [{cluster_name => 'nodes', cluster_hosts => [{address => 'localhost', port => '8649'}]}],

@@ -12,7 +12,8 @@
 
   class { 'motd': }
   motd::register{ 'Module : motd': }
-
+  motd::register{ 'Module : logrotate': }
+  
   #Setup repositories
   class { 'apt':
     always_apt_update => true,
@@ -108,7 +109,7 @@
 
   #Install applications to provision machines
   case $::operatingsystem {
-    default: { $provision_packages = ['juju'] }
+    default: { $provision_packages = ['byobu'] }
   }
 
   package { $provision_packages:
@@ -137,6 +138,15 @@
   ufw::allow { 'allow-all-http-8080-from-all':
     port => 8080,
   }
+  logrotate::rule { 'apache':
+    path          => '/var/log/httpd/*.log',
+    rotate        => 5,
+    mail          => 'test@example.com',
+    size          => '100k',
+    sharedscripts => true,
+    postrotate    => '/etc/init.d/httpd restart',
+  }
+
   motd::register{ 'Module : puppetmaster': }
   #motd::register{ 'Module : puppet-dashboard': }
   motd::register{ 'Module : apache': }

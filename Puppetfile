@@ -10,7 +10,7 @@ mod 'attachmentgenie/ssh'
 mod 'attachmentgenie/timezone'
 mod 'attachmentgenie/ufw'
 mod 'motd',
-    :git => 'git://github.com/attachmentgenie/attachmentgenie-motd.git'
+    :git => 'git://github.com/attachmentgenie/puppet-motd.git'
 mod 'puppet',
     :git => 'git://github.com/attachmentgenie/puppetlabs-puppet.git'
 mod 'dashboard',
@@ -21,3 +21,13 @@ mod 'passenger',
 mod 'puppetlabs/apache'
 mod 'ganglia',
     :git => 'git://github.com/attachmentgenie/puppet-ganglia'
+mod 'logstash',
+    :git => 'git://github.com/attachmentgenie/puppet-logstash'
+mod 'kibana',
+    :git => 'git://github.com/attachmentgenie/puppet-kibana'
+mod 'statsd',
+    :git => 'git://github.com/attachmentgenie/puppet-statsd'
+mod 'graphite',
+    :git => 'git://github.com/attachmentgenie/puppet-graphite'
+mod 'gdash',
+    :git => 'git://github.com/attachmentgenie/puppet-gdash'

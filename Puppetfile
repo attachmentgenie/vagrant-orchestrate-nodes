@@ -25,13 +25,3 @@ mod 'ganglia',
     :git => 'git://github.com/attachmentgenie/puppet-ganglia'
 mod 'logrotate',
     :git => 'git://github.com/attachmentgenie/puppet-logrotate'
-mod 'logstash',
-    :git => 'git://github.com/simonmcc/puppet-logstash.git'
-mod 'kibana',
-    :git => 'git://github.com/attachmentgenie/puppet-kibana'
-mod 'statsd',
-    :git => 'git://github.com/attachmentgenie/puppet-statsd'
-mod 'graphite',
-    :git => 'git://github.com/attachmentgenie/puppet-graphite'
-mod 'gdash',
-    :git => 'git://github.com/attachmentgenie/puppet-gdash'

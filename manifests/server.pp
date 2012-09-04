@@ -104,12 +104,6 @@
   }
   motd::register{ 'Module : ganglia': }
 
-  class {'logstash::common':
-    logstash_jar_provider => 'http',
-  }
-  class {'logstash::indexer': }
-  motd::register{ 'Module : logstash': }
-
   #Install default applications
   case $::operatingsystem {
     default: { $mcollective_packages = ['mcollective','mcollective-client','mcollective-common','mcollective-middleware'] }

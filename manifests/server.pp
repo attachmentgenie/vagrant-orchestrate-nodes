@@ -23,7 +23,7 @@
 
   #Install default applications
   case $::operatingsystem {
-    default: { $default_packages = ['subversion','git','tree','zip','unzip','ant','ant-contrib','python-setuptools','ruby','rubygems'] }
+    default: { $default_packages = ['subversion','git','tree','zip','unzip','ant','ant-contrib','python-setuptools','ruby','rubygems','curl'] }
   }
 
   package { $default_packages:
@@ -103,6 +103,12 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
+
+  class {'logstash::common':
+    logstash_jar_provider => 'http',
+  }
+  class {'logstash::indexer': }
+  motd::register{ 'Module : logstash': }
 
   #Install default applications
   case $::operatingsystem {

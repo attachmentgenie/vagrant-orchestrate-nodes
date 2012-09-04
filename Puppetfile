@@ -26,7 +26,7 @@ mod 'ganglia',
 mod 'logrotate',
     :git => 'git://github.com/attachmentgenie/puppet-logrotate'
 mod 'logstash',
-    :git => 'git://github.com/attachmentgenie/puppet-logstash'
+    :git => 'git://github.com/simonmcc/puppet-logstash.git'
 mod 'kibana',
     :git => 'git://github.com/attachmentgenie/puppet-kibana'
 mod 'statsd',

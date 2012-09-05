@@ -25,7 +25,7 @@ Centralised logging, collect all tradional output into central server.
     - users
     - motd
     - apt
-    - apps::default => subversion, git, tree, zip, unzip, ant, ant-contrib, python-setuptools, ruby, rubygems
+    - apps::default => subversion, git, tree, zip, unzip, ant, ant-contrib, python-setuptools, ruby, rubygems, curl, wget
     - ntp
     - rsyslog::client
     - ssh::client

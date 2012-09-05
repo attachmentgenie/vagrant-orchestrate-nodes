@@ -18,12 +18,17 @@
   class { 'apt':
     always_apt_update => true,
   }
-
+  apt::source { 'puppetlabs':
+    location   => 'http://apt.puppetlabs.com',
+    repos      => 'main',
+    key        => '4BD6EC30',
+    key_server => 'pgp.mit.edu',
+  }
   motd::register{ 'Module : apt': }
 
   #Install default applications
   case $::operatingsystem {
-    default: { $default_packages = ['subversion','git','tree','zip','unzip','ant','ant-contrib','python-setuptools','ruby','rubygems','curl'] }
+    default: { $default_packages = ['subversion','git','tree','zip','unzip','ant','ant-contrib','python-setuptools','ruby','rubygems','curl','wget'] }
   }
 
   package { $default_packages:
@@ -104,21 +109,15 @@
   }
   motd::register{ 'Module : ganglia': }
 
-  #Install default applications
   case $::operatingsystem {
     default: { $mcollective_packages = ['mcollective','mcollective-client','mcollective-common','mcollective-middleware'] }
   }
 
-  package { $mcollective_packages:
-    ensure  => latest,
-    require => Exec['apt_update'],
-  }
-  ufw::allow { 'allow-all-mcollective-from-all':
-    port => 6163,
+  apt::force { $mcollective_packages:
+    release => "precise-updates",
   }
   motd::register{ 'Module : mcollective': }
 
-  #Install applications to provision machines
   case $::operatingsystem {
     default: { $provision_packages = ['byobu'] }
   }
@@ -136,13 +135,13 @@
     ensure   => latest,
     provider => gem,
   }
-
+  
   class { 'puppet':
     agent               => false,
     master              => true,
     puppet_passenger    => true,
-    dashboard           => false,
-    dashboard_passenger => false,
+    dashboard           => true,
+    dashboard_passenger => true,
     dashboard_site      => 'puppet',
     certname            => 'puppet',
   }
@@ -164,8 +163,7 @@
     sharedscripts => true,
     postrotate    => '/etc/init.d/apache2 reload > /dev/null',
   }
-
   motd::register{ 'Module : puppetmaster': }
-  #motd::register{ 'Module : puppet-dashboard': }
+  motd::register{ 'Module : puppet-dashboard': }
   motd::register{ 'Module : apache': }
   motd::register{ 'Module : passenger': }

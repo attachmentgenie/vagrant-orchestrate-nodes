@@ -114,7 +114,7 @@
   }
 
   apt::force { $mcollective_packages:
-    release => "precise-updates",
+    release => 'precise-updates',
   }
   motd::register{ 'Module : mcollective': }
 

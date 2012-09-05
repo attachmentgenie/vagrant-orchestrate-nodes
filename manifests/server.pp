@@ -56,17 +56,6 @@
   motd::register{ 'Module : network': }
 
   class { 'ufw': }
-  logrotate::rule { 'ufw':
-    path          => '/var/log/ufw.log',
-    rotate        => 4,
-    rotate_every  => 'week',
-    missingok     => true,
-    ifempty       => false,
-    compress      => true,
-    delaycompress => true,
-    sharedscripts => true,
-    postrotate    => 'invoke-rc.d rsyslog reload >/dev/null 2>&1 || true',
-  }
   motd::register{ 'Module : ufw': }
 
   class { 'ssh::client': }
@@ -108,7 +97,17 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
-
+  
+  package { 'icinga':
+    ensure  => latest,
+    require => Exec['apt_update'],
+  }
+  service { 'icinga':
+    ensure  => running,
+    require => Package['icinga'],
+  }
+  motd::register{ 'Module : icinga': }
+     
   case $::operatingsystem {
     default: { $mcollective_packages = ['mcollective','mcollective-client','mcollective-common','mcollective-middleware'] }
   }
@@ -147,21 +146,6 @@
   }
   ufw::allow { 'allow-all-http-8080-from-all':
     port => 8080,
-  }
-  logrotate::rule { 'apache2':
-    path          => '/var/log/apache2/*.log',
-    rotate_every  => 'week',
-    missingok     => true,
-    rotate        => 52,
-    compress      => true,
-    delaycompress => true,
-    ifempty       => false,
-    create        => true,
-    create_mode   => 640,
-    create_owner  => 'root',
-    create_group  => 'adm',
-    sharedscripts => true,
-    postrotate    => '/etc/init.d/apache2 reload > /dev/null',
   }
   motd::register{ 'Module : puppetmaster': }
   motd::register{ 'Module : puppet-dashboard': }

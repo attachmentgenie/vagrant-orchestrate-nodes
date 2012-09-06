@@ -59,6 +59,9 @@
   motd::register{ 'Module : ufw': }
 
   class { 'ssh::client': }
+  class { "ssh::server":
+    allowed_users => ["vagrant"],
+  }
   ufw::allow { 'allow-all-ssh-from-all':
     port => 22,
   }
@@ -144,6 +147,9 @@
     dashboard_site      => 'puppet',
     certname            => 'puppet',
   }
+  class { 'puppet::hiera':
+    provider => 'apt',
+  }  
   ufw::allow { 'allow-all-http-8080-from-all':
     port => 8080,
   }

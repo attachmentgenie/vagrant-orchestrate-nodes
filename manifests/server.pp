@@ -67,6 +67,9 @@
   }
   motd::register{ 'Module : ssh': }
 
+  class { 'sudo': }
+  motd::register{ 'Module : sudo': }
+  
   class { 'ntp': }
   ufw::allow { 'allow-all-ntp-from-all':
     port => 123,

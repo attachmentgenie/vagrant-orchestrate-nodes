@@ -59,8 +59,8 @@
   motd::register{ 'Module : ufw': }
 
   class { 'ssh::client': }
-  class { "ssh::server":
-    allowed_users => ["vagrant"],
+  class { 'ssh::server':
+    allowed_users => ['vagrant'],
   }
   ufw::allow { 'allow-all-ssh-from-all':
     port => 22,
@@ -100,7 +100,7 @@
     port => 80,
   }
   motd::register{ 'Module : ganglia': }
-  
+
   package { 'icinga':
     ensure  => latest,
     require => Exec['apt_update'],
@@ -110,7 +110,7 @@
     require => Package['icinga'],
   }
   motd::register{ 'Module : icinga': }
-     
+
   case $::operatingsystem {
     default: { $mcollective_packages = ['mcollective','mcollective-client','mcollective-common','mcollective-middleware'] }
   }
@@ -137,7 +137,7 @@
     ensure   => latest,
     provider => gem,
   }
-  
+
   class { 'puppet':
     agent               => false,
     master              => true,
@@ -149,7 +149,7 @@
   }
   class { 'puppet::hiera':
     provider => 'apt',
-  }  
+  }
   ufw::allow { 'allow-all-http-8080-from-all':
     port => 8080,
   }

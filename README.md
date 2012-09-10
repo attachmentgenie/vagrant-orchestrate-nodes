@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/attachmentgenie/Orchestrate-Nodes.png)](http://travis-ci.org/attachmentgenie/Orchestrate-Nodes)
+[![Build Status](https://secure.travis-ci.org/attachmentgenie/vagrant-orchestrate-nodes.png)](http://travis-ci.org/attachmentgenie/vagrant-orchestrate-nodes)
 
 # Setting up your nodes #
 

@@ -50,11 +50,11 @@ Centralised logging, collect all tradional output into central server.
         - todo use environments
         - use behind passenger
     - puppet::dashboard
-        - todo use as enc
         - use behind passenger
     - todo central logging
     - gangliad
     - mcollective client
+    - todo setup enc
     - todo nagiosd
     - todo gdash
     - todo graphite

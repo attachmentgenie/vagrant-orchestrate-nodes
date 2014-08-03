@@ -1,7 +1,8 @@
+.project
 .vagrant
 .tmp/
+Gemfile.lock
+Puppetfile.lock
+.librarian/
 modules/
-
-/Puppetfile.lock
-
-/.librarian/
+.idea

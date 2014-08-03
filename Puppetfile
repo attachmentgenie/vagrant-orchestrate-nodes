@@ -1,27 +1,14 @@
-forge "http://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
+mod 'darin/zypprepo'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/apache'
-mod 'ripienaar/concat'
+mod 'puppetlabs/concat'
+mod 'puppetlabs/firewall'
+mod 'puppetlabs/java'
 mod 'puppetlabs/ntp'
+mod 'puppetlabs/stdlib'
+mod 'rodjek/logrotate'
+mod 'rtyler/jenkins'
 mod 'saz/rsyslog'
 mod 'saz/sudo'
-mod 'attachmentgenie/locales'
-mod 'attachmentgenie/network'
-mod 'attachmentgenie/ssh'
-mod 'attachmentgenie/timezone'
-mod 'attachmentgenie/ufw'
-mod 'motd',
-    :git => 'git://github.com/attachmentgenie/puppet-motd.git'
-mod 'puppet',
-    :git => 'git://github.com/attachmentgenie/puppetlabs-puppet.git'
-mod 'dashboard',
-    :git => 'git://github.com/attachmentgenie/puppetlabs-dashboard.git'
-mod 'puppetlabs/mysql'
-mod 'passenger',
-    :git => 'git://github.com/attachmentgenie/puppetlabs-passenger.git'
-mod 'puppetlabs/apache'
-mod 'ganglia',
-    :git => 'git://github.com/attachmentgenie/puppet-ganglia'
-mod 'logrotate',
-    :git => 'git://github.com/attachmentgenie/puppet-logrotate'

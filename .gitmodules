@@ -1,0 +1,18 @@
+[submodule "modules/locales"]
+	path = modules/locales
+	url = git@github.com:attachmentgenie/attachmentgenie-locales.git
+[submodule "modules/motd"]
+	path = modules/motd
+	url = git@github.com:attachmentgenie/attachmentgenie-motd.git
+[submodule "modules/network"]
+	path = modules/network
+	url = git@github.com:attachmentgenie/attachmentgenie-network.git
+[submodule "modules/ssh"]
+	path = modules/ssh
+	url = git@github.com:attachmentgenie/attachmentgenie-ssh.git
+[submodule "modules/timezone"]
+	path = modules/timezone
+	url = git@github.com:attachmentgenie/attachmentgenie-timezone.git
+[submodule "modules/ufw"]
+	path = modules/ufw
+	url = git@github.com:attachmentgenie/attachmentgenie-ufw.git

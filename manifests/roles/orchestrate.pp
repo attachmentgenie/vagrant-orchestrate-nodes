@@ -1,4 +1,4 @@
-node /puppetmaster/ {
+node /orchestrate/ {
 
   class { 'profiles::bootstrap': }
 }

@@ -12,13 +12,13 @@ Vagrant.configure('2') do |config|
     ]
   end
 
-  config.vm.define :puppetmaster1 do |puppetmaster1_config|
-    puppetmaster1_config.vm.network :private_network, ip: "192.168.21.130"
-    puppetmaster1_config.vm.host_name = "puppetmaster1.vagrant"
-    puppetmaster1_config.vm.provision :puppet do |puppetmaster1_puppet|
-      puppetmaster1_puppet.manifests_path = "manifests"
-      puppetmaster1_puppet.module_path = "modules"
-      puppetmaster1_puppet.manifest_file = "site.pp"
+  config.vm.define :orchestrate1 do |orchestrate1_config|
+    orchestrate1_config.vm.network :private_network, ip: "192.168.21.130"
+    orchestrate1_config.vm.host_name = "orchestrate1.vagrant"
+    orchestrate1_config.vm.provision :puppet do |orchestrate1_puppet|
+      orchestrate1_puppet.manifests_path = "manifests"
+      orchestrate1_puppet.module_path = "modules"
+      orchestrate1_puppet.manifest_file = "site.pp"
     end
   end
 
@@ -105,7 +105,7 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.define :node4 do |node4_config|
-    node4_config.vm.box = "puppetlabs/debian-7.5-64-puppet"
+    node4_config.vm.box = "puppetlabs/debian-7.4-64-puppet"
     node4_config.vm.network :private_network, ip: "192.168.21.144"
     node4_config.vm.host_name = "node4.vagrant"
     node4_config.vm.provision :puppet do |node4_puppet|

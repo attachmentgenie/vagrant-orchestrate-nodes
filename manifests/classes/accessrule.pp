@@ -11,7 +11,7 @@ define classes::accessrule (
     'debian': {
     }
     'redhat': {
-      firewall{$name:
+      firewall {$name:
         dport  => $port,
         proto  => $proto,
         action => $action,

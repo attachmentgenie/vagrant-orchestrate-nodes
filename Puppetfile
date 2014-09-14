@@ -1,6 +1,6 @@
 forge "https://forgeapi.puppetlabs.com"
 
-mod 'darin/zypprepo'
+mod 'mayflower/php'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/concat'
@@ -12,3 +12,4 @@ mod 'rodjek/logrotate'
 mod 'rtyler/jenkins'
 mod 'saz/rsyslog'
 mod 'saz/sudo'
+mod 'tPl0ch/composer'

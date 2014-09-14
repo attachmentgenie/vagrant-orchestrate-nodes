@@ -15,7 +15,6 @@ class profiles::bootstrap {
     host_aliases => [$hostname],
     ip           => $ipaddress,
   }
-  motd::register{ 'File : /etc/hosts': }
 
   $default_packages = ['curl',
                        'tree',
@@ -25,4 +24,6 @@ class profiles::bootstrap {
   package { $default_packages:
     ensure  => installed,
   }
+
+  motd::register{ 'Profile : bootstrap': }
 }

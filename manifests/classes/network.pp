@@ -8,5 +8,4 @@ class classes::network {
 #    },
 #    auto       => ['eth0'],
 #  }
-#  motd::register{ 'Module : network': }
 }

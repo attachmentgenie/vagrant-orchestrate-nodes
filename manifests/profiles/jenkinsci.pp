@@ -54,9 +54,9 @@ class profiles::jenkinsci {
   jenkins::plugin {
     $jenkinsPlugins: ;
   }
-  classes::accessrule { '999 accept 8080':
-    port => 8080,
-  }
+#  classes::accessrule { '999 accept 8080':
+#    port => 8080,
+#  }
 
   motd::register{ 'Profile : jenkins': }
 }

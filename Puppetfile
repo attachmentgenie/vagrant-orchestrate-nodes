@@ -1,10 +1,15 @@
 forge "https://forgeapi.puppetlabs.com"
 
+mod 'attachmentgenie/motd'
+mod 'attachmentgenie/ssh'
+mod 'attachmentgenie/timezone'
 mod 'mayflower/php'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/concat'
 mod 'puppetlabs/firewall'
+mod 'puppetlabs/git'
+mod 'puppetlabs/inifile'
 mod 'puppetlabs/java'
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/stdlib'

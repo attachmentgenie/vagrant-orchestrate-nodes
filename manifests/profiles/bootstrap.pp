@@ -1,6 +1,6 @@
 class profiles::bootstrap {
 
-  class { 'classes::access': }
+#  class { 'classes::access': }
   class { 'classes::log_client': }
   class { 'classes::locale': }
   class { 'classes::network': }

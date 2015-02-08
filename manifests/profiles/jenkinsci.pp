@@ -37,6 +37,7 @@ class profiles::jenkinsci {
                      'next-build-number',
                      'parameterized-trigger',
                      'plot',
+                     'plugin-usage-plugin',
                      'pmd',
                      'promoted-builds',
                      'publish-over-ssh',

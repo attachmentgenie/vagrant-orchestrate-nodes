@@ -1,5 +1,7 @@
 class profiles::php {
 
+  require profiles::developer
+
   case $::osfamily {
     'Debian': {
 

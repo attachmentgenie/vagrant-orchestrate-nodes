@@ -48,7 +48,7 @@ class profiles::jenkinsci {
                      'publish-over-ssh',
                      'rebuild',
                      'run-condition',
-                     'shared-workspace',
+                     'rundeck',
                      'show-build-parameters',
                      'scm-api',
                      'ssh',

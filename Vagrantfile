@@ -53,6 +53,9 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.define :ci1 do |ci1_config|
+    config.vm.provider "virtualbox" do |v|
+      v.memory = 2048
+    end
     ci1_config.vm.network :private_network, ip: "192.168.21.134"
     ci1_config.vm.host_name = "ci1.vagrant"
     ci1_config.vm.provision :puppet do |ci1_puppet|
@@ -105,7 +108,7 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.define :node4 do |node4_config|
-    node4_config.vm.box = "puppetlabs/debian-7.4-64-puppet"
+    node4_config.vm.box = "puppetlabs/debian-7.6-64-puppet"
     node4_config.vm.network :private_network, ip: "192.168.21.144"
     node4_config.vm.host_name = "node4.vagrant"
     node4_config.vm.provision :puppet do |node4_puppet|

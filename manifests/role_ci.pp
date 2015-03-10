@@ -1,6 +1,6 @@
-class roles::ci {
+class role_ci {
+  require ::stack_bootstrap
 
-  class { 'profiles::bootstrap': }
   class { 'profiles::developer': }
   class { 'profiles::jenkinsci': }
   class { 'profiles::package': }

@@ -1,6 +1,7 @@
-class roles::proxy {
+class role_proxy {
+  require ::stack_bootstrap
 
-  class { 'profiles::bootstrap': }
+  class { '::profile_haproxy': }
 
-  motd::register{ 'Role : proxy': }
+  motd::register{ 'Role  : proxy': }
 }

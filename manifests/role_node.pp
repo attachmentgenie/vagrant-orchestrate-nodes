@@ -1,6 +1,7 @@
-class roles::node {
+class role_node {
+  require ::stack_bootstrap
 
-  class { 'profiles::bootstrap': }
+  class { '::stack_website': }
 
-  motd::register{ 'Role : node': }
+  motd::register{ 'Role  : node': }
 }

@@ -1,6 +1,13 @@
 class stack_bootstrap {
 
-  class { 'motd': }
+  stage { 'before':
+    before => Stage['main'],
+  }
+  class { '::epel':
+    stage => before,
+  }
+  class { '::motd': }
+  class { '::profile_icinga': }
   class { '::profile_firewall': }
   class { '::profile_log_client': }
   class { '::profile_locale': }

@@ -75,41 +75,41 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define :hypervisor1 do |hypervisor1_config|
-      hypervisor1_config.vm.network :private_network, ip: "192.168.21.137"
+      hypervisor1_config.vm.network :private_network, ip: "192.168.21.140"
       hypervisor1_config.vm.host_name = "hypervisor1.testlab.vagrant"
     end
 
     config.vm.define :proxy1 do |proxy1_config|
-      proxy1_config.vm.network :private_network, ip: "192.168.21.138"
+      proxy1_config.vm.network :private_network, ip: "192.168.21.141"
       proxy1_config.vm.host_name = "proxy1.testlab.vagrant"
     end
 
     config.vm.define :node1 do |node1_config|
-      node1_config.vm.network :private_network, ip: "192.168.21.141"
+      node1_config.vm.network :private_network, ip: "192.168.21.151"
       node1_config.vm.host_name = "node1.testlab.vagrant"
     end
 
     config.vm.define :node2 do |node2_config|
       node2_config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
-      node2_config.vm.network :private_network, ip: "192.168.21.142"
+      node2_config.vm.network :private_network, ip: "192.168.21.152"
       node2_config.vm.host_name = "node2.testlab.vagrant"
     end
 
     config.vm.define :node3 do |node3_config|
       node3_config.vm.box = "puppetlabs/ubuntu-12.04-64-puppet"
-      node3_config.vm.network :private_network, ip: "192.168.21.143"
+      node3_config.vm.network :private_network, ip: "192.168.21.153"
       node3_config.vm.host_name = "node3.testlab.vagrant"
     end
 
     config.vm.define :node4 do |node4_config|
       node4_config.vm.box = "puppetlabs/debian-7.6-64-puppet"
-      node4_config.vm.network :private_network, ip: "192.168.21.144"
+      node4_config.vm.network :private_network, ip: "192.168.21.154"
       node4_config.vm.host_name = "node4.testlab.vagrant"
     end
 
     config.vm.define :node5 do |node5_config|
       node5_config.vm.box = "dhoppe/debian-6.0.10-amd64"
-      node5_config.vm.network :private_network, ip: "192.168.21.145"
+      node5_config.vm.network :private_network, ip: "192.168.21.155"
       node5_config.vm.host_name = "node5.testlab.vagrant"
     end
 end

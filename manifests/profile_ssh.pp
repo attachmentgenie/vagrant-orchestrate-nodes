@@ -15,7 +15,7 @@ class profile_ssh (
     }
   }
   class { 'ssh::server':
-    allowed_users => ['vagrant','git'],
+    allowed_users => $allowed_users,
     print_motd    => $print_motd,
   }
 }

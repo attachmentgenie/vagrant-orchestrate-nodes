@@ -1,4 +1,5 @@
 ---
+icinga::use_auth: false
 profile_firewall::ensure: stopped
 profile_ssh::allowed_users:
   - vagrant

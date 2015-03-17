@@ -1,8 +1,5 @@
 forge "https://forgeapi.puppetlabs.com"
 
-mod 'attachmentgenie/motd'
-mod 'attachmentgenie/ssh'
-mod 'attachmentgenie/timezone'
 mod 'arioch/icinga'
 mod 'hawknewton/pulp'
 mod 'mayflower/php'
@@ -28,3 +25,4 @@ mod 'stahnma/epel'
 mod 'theforeman/foreman'
 mod 'theforeman/puppet'
 mod 'tPl0ch/composer'
+mod 'yguenane/repoforge'

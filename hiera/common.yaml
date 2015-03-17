@@ -1,3 +1,4 @@
 ---
 classes:
   - stack_bootstrap
+foreman::configure_epel_repo: false

@@ -10,6 +10,7 @@
 
 ### Setup ###
     librarian-puppet install
+    git submodule update --init
     vagrant up
     vagrant provision
     vagrant ssh

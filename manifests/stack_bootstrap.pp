@@ -1,11 +1,7 @@
-class stack_bootstrap {
+class stack_bootstrap (
+  $monitor_node = true,
+) {
 
-  stage { 'before':
-    before => Stage['main'],
-  }
-  class { '::epel':
-    stage => before,
-  }
   class { '::motd': }
   class { '::profile_icinga': }
   class { '::profile_firewall': }
@@ -16,13 +12,6 @@ class stack_bootstrap {
   class { '::profile_ssh': }
   class { '::profile_sudo': }
   class { '::profile_time': }
-
-  host {'self':
-    ensure       => present,
-    name         => $fqdn,
-    host_aliases => [$hostname],
-    ip           => $ipaddress,
-  }
 
   motd::register{ 'Stack : bootstrap': }
 }

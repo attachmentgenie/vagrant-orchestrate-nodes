@@ -1,7 +1,8 @@
 class role_orchestrate {
 
-  require ::stack_bootstrap
+  # chicken and egg problem regarding icinga so turning on for now.
+  #require ::stack_bootstrap
   class { '::stack_foreman': }
 
-  motd::register{ 'Role : orchestrate': }
+  motd::register{ 'Role  : orchestrate': }
 }

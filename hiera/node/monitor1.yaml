@@ -2,3 +2,4 @@
 classes:
   - role_monitor
 profile_icinga::is_server: true
+profile_icinga::manage_server: true

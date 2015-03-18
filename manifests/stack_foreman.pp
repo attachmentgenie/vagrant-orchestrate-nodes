@@ -7,14 +7,15 @@ class stack_foreman (
   #  listen_address  => '0.0.0.0',
   #  manage_firewall => false,
   #}
-  class { '::foreman':
-    admin_password => $admin_password,
-  }
+  #class { '::foreman':
+  #  admin_password => $admin_password,
+  #}
   class { '::puppet':
-    server                      => true,
-  #  server_puppetdb_host        => $foreman_host,
-  #  server_reports              => 'puppetdb,foreman',
-  #  server_storeconfigs_backend => 'puppetdb',
+    runmode               => 'none',
+    server                => true,
+    server_foreman        => false,
+    server_reports        => 'store',
+    server_external_nodes => '',
   }
 
   motd::register{ 'Stack : foreman': }

@@ -1,21 +1,17 @@
-class stack_foreman (
-  $admin_password = 'secret',
-  $autosign       = true,
-  $foreman_host   = $::fqdn,
-) {
-  #class { '::puppetdb':
-  #  listen_address  => '0.0.0.0',
-  #  manage_firewall => false,
-  #}
-  #class { '::foreman':
-  #  admin_password => $admin_password,
-  #}
+class stack_foreman () {
+  class { '::puppetdb':
+    listen_address  => '0.0.0.0',
+    manage_firewall => false,
+  }
+
   class { '::puppet':
-    runmode               => 'none',
-    server                => true,
-    server_foreman        => false,
-    server_reports        => 'store',
-    server_external_nodes => '',
+    runmode                     => 'none',
+    server                      => true,
+    server_external_nodes       => '',
+    server_foreman              => false,
+    server_puppetdb_host        => $::fqdn,
+    server_reports              => 'puppetdb,foreman',
+    server_storeconfigs_backend => 'puppetdb',
   }
 
   motd::register{ 'Stack : foreman': }

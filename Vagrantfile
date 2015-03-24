@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     ext_env = ENV['VAGRANT_PUPPET_ENV']
     env = ext_env ? ext_env : default_env
     server = 'orchestrate1.testlab.vagrant'
-    SCRIPT = "sudo puppet agent -t --environment #{env} --server #{server}"
+    SCRIPT = "sudo puppet agent -t --environment #{env} --server #{server}; echo $?"
 
 ###############################################################################
 # Global VirtualBox settings                                                  #
@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.define :monitor1 do |monitor1_config|
       monitor1_config.vm.host_name = "monitor1.testlab.vagrant"
-      monitor1_config.vm.network :forwarded_port, guest: 22, host: 2131
+      monitor1_config.vm.network :forwarded_port, guest: 22, host: 2132
       monitor1_config.vm.network :private_network, ip: "192.168.21.132"
       monitor1_config.vm.provision :hosts
       monitor1_config.vm.provision 'shell', inline: SCRIPT

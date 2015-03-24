@@ -11,4 +11,6 @@ class profile_haproxy {
                         },
     ports            => '80',
   }
+
+  Haproxy::Balancermember <<| |>>
 }

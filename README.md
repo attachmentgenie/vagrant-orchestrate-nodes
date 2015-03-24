@@ -17,5 +17,12 @@
     
 ## Interfaces
 
+### icinga
+http://192.168.21.132/icinga
+
 ### Haproxy
 http://192.168.21.160/haproxy_stats
+
+### puppetdb
+
+http://192.168.21.130:8080/

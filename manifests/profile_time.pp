@@ -1,7 +1,12 @@
-class profile_time {
+class profile_time (
+  $restrict = [],
+  $zone     = 'Europe/Amsterdam',
+) {
 
-  class { 'ntp': }
+  class { 'ntp':
+    restrict => $restrict,
+  }
   class { 'timezone':
-    zone => 'Europe/Amsterdam',
+    zone     => $zone,
   }
 }

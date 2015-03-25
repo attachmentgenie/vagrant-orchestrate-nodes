@@ -1,6 +1,10 @@
 class profile_icinga (
   $is_server   = false,
 ) {
+  stage { 'before':
+    before => Stage['main'],
+  }
+
   case $::osfamily {
     'RedHat': {
       class { '::repoforge':

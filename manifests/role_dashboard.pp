@@ -1,6 +1,5 @@
 class roles::dashboard {
-
-  class { 'profiles::bootstrap': }
+  require ::stack_bootstrap
 
   motd::register{ 'Role : dashboard': }
 }

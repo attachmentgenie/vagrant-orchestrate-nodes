@@ -8,4 +8,6 @@ class profile_network {
 #    },
 #    auto       => ['eth0'],
 #  }
+
+  motd::register{ 'Profile : network': }
 }

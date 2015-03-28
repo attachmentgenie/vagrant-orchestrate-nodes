@@ -1,6 +1,6 @@
 class profile_package {
 
-  require profiles::developer
+  require ::profile_ruby
 
   package { 'fpm':
     ensure   => 'latest',

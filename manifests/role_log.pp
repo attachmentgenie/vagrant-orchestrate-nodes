@@ -1,6 +1,5 @@
 class roles::log {
-
-  class { 'profiles::bootstrap': }
+  require ::stack_bootstrap
 
   motd::register{ 'Role : log': }
 }

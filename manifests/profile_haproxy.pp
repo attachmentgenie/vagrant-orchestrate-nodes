@@ -13,4 +13,6 @@ class profile_haproxy {
   }
 
   Haproxy::Balancermember <<| |>>
+
+  motd::register{ 'Profile : haproxy': }
 }

@@ -9,4 +9,6 @@ class profile_time (
   class { 'timezone':
     zone     => $zone,
   }
+
+  motd::register{ 'Profile : time': }
 }

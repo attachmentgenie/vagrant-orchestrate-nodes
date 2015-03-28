@@ -1,4 +1,4 @@
-class stack_developer {
+class profile_ruby {
 
   case $::osfamily {
     'debian': {
@@ -13,5 +13,5 @@ class stack_developer {
   }
   package { $developerPackages: ensure => installed }
 
-  motd::register{ 'Stack : developer': }
+  motd::register{ 'Profile : ruby': }
 }

@@ -12,4 +12,6 @@ class profile_repositories {
       fail("Unsupported osfamily ${::osfamily}")
     }
   }
+
+  motd::register{ 'Profile : repositories': }
 }

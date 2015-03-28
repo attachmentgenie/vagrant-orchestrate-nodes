@@ -18,4 +18,6 @@ class profile_ssh (
     allowed_users => $allowed_users,
     print_motd    => $print_motd,
   }
+
+  motd::register{ 'Profile : ssh': }
 }

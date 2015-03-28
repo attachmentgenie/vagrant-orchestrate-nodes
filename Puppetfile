@@ -3,6 +3,8 @@ forge "https://forgeapi.puppetlabs.com"
 mod 'arioch/icinga'
 mod 'hawknewton/pulp'
 mod 'mayflower/php'
+mod 'opentable/puppetdb_rundeck'
+mod 'puppet/rundeck'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/concat'

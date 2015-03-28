@@ -5,4 +5,6 @@ class profile_locale {
       class { 'locales': }
     }
   }
+
+  motd::register{ 'Profile : locale': }
 }

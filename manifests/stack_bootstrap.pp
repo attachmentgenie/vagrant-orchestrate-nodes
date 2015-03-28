@@ -5,7 +5,7 @@ class stack_bootstrap (
   class { '::motd': }
   class { '::profile_icinga': }
   class { '::profile_firewall': }
-  class { '::profile_log_client': }
+  class { '::profile_rsyslog_client': }
   class { '::profile_locale': }
   class { '::profile_network': }
   class { '::profile_repositories': }

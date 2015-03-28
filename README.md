@@ -17,12 +17,23 @@
     
 ## Interfaces
 
-### icinga
-http://192.168.21.132/icinga
+### rundeck
 
-### Haproxy
-http://192.168.21.160/haproxy_stats
+http://192.168.21.130:4440
 
 ### puppetdb
 
-http://192.168.21.130:8080/
+http://192.168.21.130:8080
+
+### rundeck_puppetdb
+
+http://192.168.21.130:4567
+
+### icinga
+http://192.168.21.132/icinga
+
+### jenkins
+http://192.168.21.136:8080
+
+### Haproxy
+http://192.168.21.160/haproxy_stats

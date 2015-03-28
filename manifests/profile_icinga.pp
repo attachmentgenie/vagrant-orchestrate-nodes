@@ -38,8 +38,7 @@ class profile_icinga (
                                'checkssh',
                                'checkswap',
                                'checktotalprocs',
-                               'checkzombie',
-                               'pnp4nagios' ],
+                               'checkzombie'],
   }
 
   icinga::user { 'dummy1':

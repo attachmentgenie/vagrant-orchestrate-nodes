@@ -1,6 +1,0 @@
----
-classes:
-  - role_git
-profile_ssh::allowed_users:
-  - git
-  - vagrant

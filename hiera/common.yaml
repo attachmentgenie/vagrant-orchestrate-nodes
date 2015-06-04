@@ -1,4 +1,2 @@
 ---
-classes:
-  - stack_bootstrap
-foreman::configure_epel_repo: false
+orchestrate::profile_firewall::ensure: stopped

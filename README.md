@@ -17,23 +17,27 @@
     
 ## Interfaces
 
+### the foreman
+
+http://orchestrate1.testlab.vagrant
+
 ### rundeck
 
-http://192.168.21.130:4440
+http://orchestrate1.testlab.vagrant:4440
 
 ### puppetdb
 
-http://192.168.21.130:8080
+http://puppet.testlab.vagrant:8080
 
 ### rundeck_puppetdb
 
-http://192.168.21.130:4567
+http://puppet.testlab.vagrant:4567
 
 ### icinga
-http://192.168.21.132/icinga
+http://monitor1.testlab.vagrant/icinga
 
 ### jenkins
-http://192.168.21.136:8080
+http://ci1.testlab.vagrant:8080
 
 ### Haproxy
-http://192.168.21.160/haproxy_stats
+http://proxy1.testlab.vagrant/haproxy_stats

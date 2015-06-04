@@ -1,6 +1,7 @@
 forge "https://forgeapi.puppetlabs.com"
 
 mod 'arioch/icinga'
+mod 'camptocamp/accounts'
 mod 'hawknewton/pulp'
 mod 'mayflower/php'
 mod 'opentable/puppetdb_rundeck'
@@ -25,6 +26,7 @@ mod 'saz/sudo'
 mod 'spuder/gitlab'
 mod 'stahnma/epel'
 mod 'theforeman/foreman'
+mod 'theforeman/foreman_proxy'
 mod 'theforeman/puppet'
 mod 'tPl0ch/composer'
 mod 'yguenane/repoforge'

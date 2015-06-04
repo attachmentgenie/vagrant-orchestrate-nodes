@@ -10,3 +10,12 @@
 [submodule "modules/locales"]
 	path = modules/locales
 	url = git@github.com:attachmentgenie/attachmentgenie-locales.git
+[submodule "modules/puppetmaster"]
+	path = modules/puppetmaster
+	url = git@github.com:attachmentgenie/attachmentgenie-puppetmaster.git
+[submodule "modules/orchestrate"]
+	path = modules/orchestrate
+	url = git@github.com:attachmentgenie/attachmentgenie-orchestrate.git
+[submodule "modules/selinux"]
+	path = modules/selinux
+	url = git@github.com:jfryman/puppet-selinux.git

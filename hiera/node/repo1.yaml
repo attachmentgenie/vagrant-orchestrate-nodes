@@ -1,3 +1,4 @@
 ---
 classes:
-  - role_repo
+  - orchestrate::role_repo
+puppetmaster::profile_foreman_proxy::foreman_host: puppet.testlab.vagrant

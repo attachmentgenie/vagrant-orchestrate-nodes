@@ -19,3 +19,9 @@
 [submodule "modules/selinux"]
 	path = modules/selinux
 	url = git@github.com:jfryman/puppet-selinux.git
+[submodule "modules/pulp"]
+	path = modules/pulp
+	url = git@github.com:pulp/puppet_deployment.git
+[submodule "modules/mongodb"]
+	path = modules/mongodb
+	url = git@github.com:puppetlabs/puppetlabs-mongodb.git

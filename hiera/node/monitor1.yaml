@@ -1,5 +1,5 @@
 ---
 classes:
-  - role_monitor
-profile_icinga::is_server: true
-profile_icinga::manage_server: true
+  - orchestrate::role_monitor
+orchestrate::profile_icinga::is_server: true
+orchestrate::profile_icinga::manage_server: true

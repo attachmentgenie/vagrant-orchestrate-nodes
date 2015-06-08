@@ -6,10 +6,8 @@
 ## Requirements
     Virtualbox       => https://www.virtualbox.org
     Vagrant          => http://www.vagrantup.com
-    librarian-puppet => gem install librarian-puppet
 
 ## Setup
-    librarian-puppet install
     git submodule update --init
     vagrant up
     vagrant provision

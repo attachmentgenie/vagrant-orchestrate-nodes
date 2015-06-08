@@ -3,12 +3,10 @@ classes:
   - puppetmaster::role_puppetmaster
 puppetmaster::profile_foreman_proxy::foreman_host: puppet.testlab.vagrant
 puppetmaster::profile_foreman_proxy::puppetca: true
-puppetmaster::profile_puppet::runmode: none
 puppetmaster::profile_puppet::server: true
 puppetmaster::profile_puppet::puppetmaster: puppet.testlab.vagrant
-puppetmaster::profile_puppet::server_external_nodes: ''
 puppetmaster::profile_puppet::server_foreman: true
-puppetmaster::profile_puppet::server_foreman_url: 'puppet.testlab.vagrant'
+puppetmaster::profile_puppet::server_foreman_url: 'https://puppet.testlab.vagrant'
 puppetmaster::profile_puppet::server_puppetdb_host: puppet.testlab.vagrant
 puppetmaster::profile_puppet::server_reports: 'store, foreman'
 puppetmaster::profile_puppet::server_storeconfigs_backend: 'puppetdb'

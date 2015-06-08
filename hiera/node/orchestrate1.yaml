@@ -1,4 +1,5 @@
 ---
 classes:
-  - role_orchestrate
-stack_puppetmaster::foreman: true
+  - orchestrate::role_orchestrate
+orchestrate::profile_rundeck::puppetdb_host: puppet.testlab.vagrant
+orchestrate::profile_rundeck::puppetdb_port: 8080

@@ -72,6 +72,10 @@ Vagrant.configure("2") do |config|
       orchestrate1_config.vm.host_name = "orchestrate1.testlab.vagrant"
       orchestrate1_config.vm.network :forwarded_port, guest: 22, host: 2131
       orchestrate1_config.vm.network :private_network, ip: "192.168.42.131"
+      orchestrate1_config.vm.provider "virtualbox" do |v|
+        v.cpus   = 2
+        v.memory = 2048
+      end
       orchestrate1_config.vm.provision 'shell', inline: SCRIPT
     end
 
@@ -87,17 +91,6 @@ Vagrant.configure("2") do |config|
       repo1_config.vm.network :forwarded_port, guest: 22, host: 2133
       repo1_config.vm.network :private_network, ip: "192.168.42.133"
       repo1_config.vm.provision 'shell', inline: SCRIPT
-    end
-
-    config.vm.define :ci1 do |ci1_config|
-      ci1_config.vm.host_name = "ci1.testlab.vagrant"
-      ci1_config.vm.network :forwarded_port, guest: 22, host: 2134
-      ci1_config.vm.network :private_network, ip: "192.168.42.134"
-      ci1_config.vm.provider "virtualbox" do |v|
-        v.cpus   = 2
-        v.memory = 4096
-      end
-      ci1_config.vm.provision 'shell', inline: SCRIPT
     end
 
     config.vm.define :hypervisor1 do |hypervisor1_config|

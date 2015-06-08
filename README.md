@@ -19,25 +19,25 @@
 
 ### the foreman
 
-http://orchestrate1.testlab.vagrant
-
-### rundeck
-
-http://orchestrate1.testlab.vagrant:4440
+https://puppet.testlab.vagrant
 
 ### puppetdb
 
 http://puppet.testlab.vagrant:8080
 
+### rundeck
+
+http://orchestrate1.testlab.vagrant:4440
+
 ### rundeck_puppetdb
 
-http://puppet.testlab.vagrant:4567
+http://orchestrate1.testlab.vagrant:4567
+
+### jenkins
+http://orchestrate1.testlab.vagrant:8080
 
 ### icinga
 http://monitor1.testlab.vagrant/icinga
-
-### jenkins
-http://ci1.testlab.vagrant:8080
 
 ### Haproxy
 http://proxy1.testlab.vagrant/haproxy_stats

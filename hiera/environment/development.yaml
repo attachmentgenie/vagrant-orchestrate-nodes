@@ -1,8 +1,4 @@
 ---
-icinga::use_auth: false
-orchestrate::profile_ssh::allowed_users:
-  - vagrant
-  - orchestrate.old
 accounts::ssh_keys:
   orchestrate:
     comment: rundeck@node
@@ -14,4 +10,9 @@ accounts::users:
     comment: 'rundeck user'
 accounts::usergroups:
   rundeck:
-    - orchestrate.old
+    - orchestrate
+icinga::use_auth: false
+orchestrate::profile_ssh::allowed_users:
+  - vagrant
+  - orchestrate
+puppetmaster::profile_puppet::puppetmaster: puppet.testlab.vagrant

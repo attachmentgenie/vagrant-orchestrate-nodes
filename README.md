@@ -37,5 +37,8 @@ http://orchestrate1.testlab.vagrant:8080
 ### icinga
 http://monitor1.testlab.vagrant/icinga
 
+### gitlab
+http://repo1.testlab.vagrant
+
 ### Haproxy
 http://proxy1.testlab.vagrant/haproxy_stats

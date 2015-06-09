@@ -25,3 +25,6 @@
 [submodule "modules/mongodb"]
 	path = modules/mongodb
 	url = git@github.com:puppetlabs/puppetlabs-mongodb.git
+[submodule "modules/qpid"]
+	path = modules/qpid
+	url = git@github.com:dprince/puppet-qpid.git

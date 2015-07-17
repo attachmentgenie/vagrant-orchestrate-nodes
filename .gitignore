@@ -1,8 +1,0 @@
-.project
-.vagrant
-.tmp/
-Gemfile.lock
-Puppetfile.lock
-.librarian/
-modules/
-.idea

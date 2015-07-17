@@ -28,3 +28,84 @@
 [submodule "modules/qpid"]
 	path = modules/qpid
 	url = git@github.com:dprince/puppet-qpid.git
+[submodule "modules/epel"]
+	path = modules/epel
+	url = git@github.com:stahnma/puppet-module-epel.git
+[submodule "modules/ntp"]
+	path = modules/ntp
+	url = git@github.com:puppetlabs/puppetlabs-ntp.git
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = git@github.com:puppetlabs/puppetlabs-stdlib.git
+[submodule "modules/firewall"]
+	path = modules/firewall
+	url = git@github.com:puppetlabs/puppetlabs-firewall.git
+[submodule "modules/foreman"]
+	path = modules/foreman
+	url = git@github.com:theforeman/puppet-foreman.git
+[submodule "modules/concat"]
+	path = modules/concat
+	url = git@github.com:puppetlabs/puppetlabs-concat.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = git@github.com:puppetlabs/puppetlabs-apache.git
+[submodule "modules/postgresql"]
+	path = modules/postgresql
+	url = git@github.com:puppetlabs/puppetlabs-postgresql.git
+[submodule "modules/foreman_proxy"]
+	path = modules/foreman_proxy
+	url = git@github.com:theforeman/puppet-foreman_proxy.git
+[submodule "modules/tftp"]
+	path = modules/tftp
+	url = git@github.com:theforeman/puppet-tftp.git
+[submodule "modules/puppet"]
+	path = modules/puppet
+	url = git@github.com:theforeman/puppet-puppet.git
+[submodule "modules/puppetdb"]
+	path = modules/puppetdb
+	url = git@github.com:puppetlabs/puppetlabs-puppetdb.git
+[submodule "modules/inifile"]
+	path = modules/inifile
+	url = git@github.com:puppetlabs/puppetlabs-inifile.git
+[submodule "modules/accounts"]
+	path = modules/accounts
+	url = git@github.com:camptocamp/puppet-accounts.git
+[submodule "modules/repoforge"]
+	path = modules/repoforge
+	url = git@github.com:Mylezeem/puppet-repoforge.git
+[submodule "modules/icinga"]
+	path = modules/icinga
+	url = git@github.com:arioch/puppet-icinga.git
+[submodule "modules/rsyslog"]
+	path = modules/rsyslog
+	url = git@github.com:saz/puppet-rsyslog.git
+[submodule "modules/jenkins"]
+	path = modules/jenkins
+	url = git@github.com:jenkinsci/puppet-jenkins.git
+[submodule "modules/java"]
+	path = modules/java
+	url = git@github.com:puppetlabs/puppetlabs-java.git
+[submodule "modules/php"]
+	path = modules/php
+	url = git@github.com:mayflower/puppet-php.git
+[submodule "modules/composer"]
+	path = modules/composer
+	url = git@github.com:tPl0ch/puppet-composer.git
+[submodule "modules/git"]
+	path = modules/git
+	url = git@github.com:puppetlabs/puppetlabs-git.git
+[submodule "modules/rundeck"]
+	path = modules/rundeck
+	url = git@github.com:puppet-community/puppet-rundeck.git
+[submodule "modules/puppetdb_rundeck"]
+	path = modules/puppetdb_rundeck
+	url = git@github.com:opentable/puppet-puppetdb_rundeck.git
+[submodule "modules/archive"]
+	path = modules/archive
+	url = git@github.com:camptocamp/puppet-archive.git
+[submodule "modules/haproxy"]
+	path = modules/haproxy
+	url = git@github.com:puppetlabs/puppetlabs-haproxy.git
+[submodule "modules/gitlab"]
+	path = modules/gitlab
+	url = git@github.com:vshn/puppet-gitlab.git

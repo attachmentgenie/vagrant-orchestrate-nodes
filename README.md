@@ -9,15 +9,15 @@
 
 ## Setup
     git submodule update --init
-    vagrant up
-    vagrant provision
-    vagrant ssh
+    vagrant up puppet
     
 ## Interfaces
 
 ### the foreman
 
 https://puppet.testlab.vagrant
+username : admin
+password : secret
 
 ### puppetdb
 
@@ -39,6 +39,8 @@ http://monitor1.testlab.vagrant/icinga
 
 ### gitlab
 http://repo1.testlab.vagrant:8081
+username : root
+password : 5iveL!fe
 
 ### Haproxy
 http://proxy1.testlab.vagrant/haproxy_stats

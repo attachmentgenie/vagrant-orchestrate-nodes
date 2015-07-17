@@ -1,5 +1,63 @@
 ---
 classes:
   - orchestrate::role_orchestrate
+orchestrate::profile_jenkins::plugins:
+  analysis-core: {}
+  ant: {}
+  build-flow-plugin: {}
+  build-flow-extensions-plugin: {}
+  build-name-setter: {}
+  buildgraph-view: {}
+  buildtriggerbadge: {}
+  claim: {}
+  cloudbees-folder: {}
+  cloverphp: {}
+  conditional-buildstep: {}
+  config-file-provider: {}
+  crap4j: {}
+  credentials: {}
+  cron_column: {}
+  dashboard-view: {}
+  dry: {}
+  email-ext: {}
+  embeddable-build-status: {}
+  envinject: {}
+  git: {}
+  git-client: {}
+  gravatar: {}
+  greenballs: {}
+  htmlpublisher: {}
+  ivy: {}
+  javadoc: {}
+  jclouds-jenkins: {}
+  jdepend: {}
+  jobConfigHistory: {}
+  jquery: {}
+  mailer: {}
+  mapdb-api: {}
+  maven-plugin: {}
+  multiple-scms: {}
+  next-build-number: {}
+  parameterized-trigger: {}
+  plot: {}
+  plugin-usage-plugin: {}
+  pmd: {}
+  project-stats-plugin: {}
+  promoted-builds: {}
+  publish-over-ssh: {}
+  rebuild: {}
+  run-condition: {}
+  rundeck: {}
+  simple-theme-plugin: {}
+  show-build-parameters: {}
+  scm-api: {}
+  ssh: {}
+  ssh-credentials: {}
+  subversion: {}
+  tap: {}
+  token-macro: {}
+  violations: {}
+  ws-cleanup: {}
+  xunit: {}
 orchestrate::profile_rundeck::puppetdb_host: puppet.testlab.vagrant
 orchestrate::profile_rundeck::puppetdb_port: 8080

@@ -48,6 +48,7 @@ orchestrate::profile_jenkins::plugins:
   rebuild: {}
   run-condition: {}
   rundeck: {}
+  scm-sync-configuration: {}
   simple-theme-plugin: {}
   show-build-parameters: {}
   scm-api: {}

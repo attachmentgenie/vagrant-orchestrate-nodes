@@ -101,6 +101,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define :node1 do |node1_config|
+      node1_config.vm.box = "puppetlabs/centos-7.0-64-puppet"
       node1_config.vm.host_name = "node1.testlab.vagrant"
       node1_config.vm.network :forwarded_port, guest: 22, host: 4250
       node1_config.vm.network :private_network, ip: "192.168.42.150"
@@ -108,7 +109,6 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define :node2 do |node2_config|
-      node2_config.vm.box = "puppetlabs/centos-7.0-64-puppet"
       node2_config.vm.host_name = "node2.testlab.vagrant"
       node2_config.vm.network :forwarded_port, guest: 22, host: 4251
       node2_config.vm.network :private_network, ip: "192.168.42.151"

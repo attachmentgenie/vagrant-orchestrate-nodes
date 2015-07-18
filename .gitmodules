@@ -109,3 +109,6 @@
 [submodule "modules/gitlab"]
 	path = modules/gitlab
 	url = git@github.com:vshn/puppet-gitlab.git
+[submodule "modules/apt"]
+	path = modules/apt
+	url = git@github.com:puppetlabs/puppetlabs-apt.git

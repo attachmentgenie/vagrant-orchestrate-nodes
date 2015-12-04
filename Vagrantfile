@@ -6,7 +6,9 @@ Vagrant.configure("2") do |config|
 ###############################################################################
 # Base box                                                                    #
 ###############################################################################
-    config.vm.box = "puppetlabs/centos-6.6-64-puppet"
+    config.vm.box              = "puppetlabs/centos-6.6-64-puppet"
+    config.vm.box_version      = '1.0.1'
+    config.vm.box_check_update = false
 
 ###############################################################################
 # Global plugin settings                                                      #
@@ -18,21 +20,26 @@ Vagrant.configure("2") do |config|
       end
     end
 
-    config.hostmanager.enabled = true
-    config.hostmanager.manage_host = true
-    config.hostmanager.ignore_private_ip = false
-    config.hostmanager.include_offline = true
-
     # Configure cached packages to be shared between instances of the same base box.
     if Vagrant.has_plugin?("vagrant-cachier")
       config.cache.scope = :machine
     end
 
+    # When destroying a node, delete the node from the puppetmaster
+    if Vagrant.has_plugin?("vagrant-triggers")
+      config.trigger.after [:destroy] do
+        target = @machine.config.vm.hostname.to_s
+        puppetmaster = "puppetmaster"
+        if target != puppetmaster
+          system("vagrant ssh #{puppetmaster} -c 'sudo /usr/bin/puppet cert clean #{target}'" )
+        end
+      end
+    end
+
 ###############################################################################
 # Global provisioning settings                                                #
 ###############################################################################
-    env = 'development'
-    SCRIPT = "sudo puppet agent -t --environment #{env} --server puppet.testlab.vagrant; echo $?"
+    env = 'xxs'
 
 ###############################################################################
 # Global VirtualBox settings                                                  #
@@ -45,8 +52,17 @@ Vagrant.configure("2") do |config|
     end
 
 ###############################################################################
+# Global /etc/hosts file settings                                             #
+###############################################################################
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+
+###############################################################################
 # VM definitions                                                              #
 ###############################################################################
+    config.vm.synced_folder ".", "/vagrant", disabled: true
     config.vm.synced_folder ".", "/vagrant", disabled: true
     config.vm.define :puppet do |puppet_config|
       config.vm.provider "virtualbox" do |v|

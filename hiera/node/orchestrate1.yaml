@@ -7,6 +7,7 @@ orchestrate::profile_jenkins::plugins:
   build-flow-plugin: {}
   build-flow-extensions-plugin: {}
   build-name-setter: {}
+  build-pipeline-plugin: {}
   buildgraph-view: {}
   buildtriggerbadge: {}
   claim: {}
@@ -18,10 +19,13 @@ orchestrate::profile_jenkins::plugins:
   credentials: {}
   cron_column: {}
   dashboard-view: {}
+  delivery-pipeline-plugin: {}
   dry: {}
+  downstream-buildview: {}
   email-ext: {}
   embeddable-build-status: {}
   envinject: {}
+  environment-dashboard: {}
   git: {}
   git-client: {}
   gravatar: {}
@@ -32,6 +36,7 @@ orchestrate::profile_jenkins::plugins:
   jclouds-jenkins: {}
   jdepend: {}
   jobConfigHistory: {}
+  job-node-stalker: {}
   jquery: {}
   mailer: {}
   mapdb-api: {}
@@ -58,6 +63,16 @@ orchestrate::profile_jenkins::plugins:
   tap: {}
   token-macro: {}
   violations: {}
+  workflow-aggregator: {}
+  workflow-basic-steps: {}
+  workflow-scm-step: {}
+  workflow-cps-global-lib: {}
+  workflow-support: {}
+  workflow-job: {}
+  workflow-durable-task-step: {}
+  workflow-cps: {}
+  workflow-api: {}
+  workflow-step-api: {}
   ws-cleanup: {}
   xunit: {}
 orchestrate::profile_rundeck::puppetdb_host: puppet.testlab.vagrant
